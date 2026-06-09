@@ -60,7 +60,7 @@ async function handleSubmit() {
               name="email"
               type="email"
               placeholder="admin@example.com"
-            >
+            />
           </label>
 
           <label class="form-field" for="password">
@@ -72,7 +72,7 @@ async function handleSubmit() {
               name="password"
               type="password"
               placeholder="Enter your password"
-            >
+            />
           </label>
 
           <div v-if="errorMessage" class="alert" role="alert">

@@ -2,6 +2,7 @@
   "name": "t-nuxt4",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@11.0.9",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
