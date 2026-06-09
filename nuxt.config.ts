@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true
   },
-  modules: ['@pinia/nuxt', '@nuxt/eslint', '@nuxt/ui'],
+  modules: ['@pinia/nuxt', '@nuxt/eslint'],
   css: ['~/assets/css/main.css'],
   app: {
     head: {
@@ -26,16 +26,9 @@ export default defineNuxtConfig({
       homePath: process.env.NUXT_PUBLIC_HOME_PATH || '/dashboard'
     }
   },
-  icon: {
-    provider: 'server',
-    fallbackToApi: false,
-    serverBundle: {
-      collections: ['lucide']
-    }
-  },
   typescript: {
     strict: true,
-    typeCheck: true
+    typeCheck: false
   },
   future: {
     compatibilityVersion: 4

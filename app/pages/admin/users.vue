@@ -27,26 +27,24 @@ const rows = [
       </p>
     </section>
 
-    <UCard class="soft-panel">
-      <template #header>
-        <div class="stack-md">
-          <h3>Sample users</h3>
-          <p class="page-copy">
-            Swap this table with your real user list endpoint once the backend
-            contract is ready.
-          </p>
-        </div>
-      </template>
+    <section class="soft-panel stack-md">
+      <div class="stack-md">
+        <h3>Sample users</h3>
+        <p class="page-copy">
+          Swap this table with your real user list endpoint once the backend
+          contract is ready.
+        </p>
+      </div>
 
       <div class="stack-md">
         <div v-for="row in rows" :key="row.name" class="soft-panel">
           <div class="pill-list">
-            <UBadge color="primary" variant="soft">{{ row.name }}</UBadge>
-            <UBadge color="neutral" variant="subtle">{{ row.role }}</UBadge>
-            <UBadge color="warning" variant="soft">{{ row.status }}</UBadge>
+            <span class="badge badge-primary">{{ row.name }}</span>
+            <span class="badge badge-neutral">{{ row.role }}</span>
+            <span class="badge badge-warning">{{ row.status }}</span>
           </div>
         </div>
       </div>
-    </UCard>
+    </section>
   </div>
 </template>

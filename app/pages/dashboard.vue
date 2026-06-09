@@ -37,17 +37,17 @@ const dashboardStats = [
         base layout for internal modules.
       </p>
       <div class="pill-list">
-        <UBadge color="primary" variant="soft">{{
+        <span class="badge badge-primary">{{
           authStore.user?.name || 'Unknown user'
-        }}</UBadge>
-        <UBadge color="neutral" variant="soft">{{
+        }}</span>
+        <span class="badge badge-neutral">{{
           authStore.user?.email || 'No email'
-        }}</UBadge>
+        }}</span>
       </div>
     </section>
 
     <section class="dashboard-grid">
-      <UCard
+      <article
         v-for="item in dashboardStats"
         :key="item.label"
         class="soft-panel"
@@ -56,7 +56,7 @@ const dashboardStats = [
           <span class="eyebrow">{{ item.label }}</span>
           <strong>{{ item.value }}</strong>
         </div>
-      </UCard>
+      </article>
     </section>
   </div>
 </template>
