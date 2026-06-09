@@ -1,9 +1,16 @@
+import { fileURLToPath } from 'node:url'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-01-01',
   devtools: {
     enabled: true
   },
   modules: ['@pinia/nuxt', '@nuxt/eslint'],
+  alias: {
+    pinia: fileURLToPath(
+      new URL('./node_modules/pinia/dist/pinia.mjs', import.meta.url)
+    )
+  },
   css: ['~/assets/css/main.css'],
   app: {
     head: {
