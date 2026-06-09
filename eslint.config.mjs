@@ -1,0 +1,14 @@
+import withNuxt from './.nuxt/eslint.config.mjs'
+import eslintConfigPrettier from 'eslint-config-prettier'
+
+export default withNuxt(
+  {
+    ignores: ['.output/**', '.nuxt/**', 'coverage/**', 'playwright-report/**']
+  },
+  {
+    rules: {
+      'vue/multi-word-component-names': 'off'
+    }
+  },
+  eslintConfigPrettier
+)
